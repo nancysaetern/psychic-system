@@ -1,0 +1,9 @@
+{{#each blogs as |blog|}}
+{{> blog-list}}
+
+{{/each}}
+{{#if loggedIn}}
+
+{{else}}
+<a href="/login"><h4 style="padding-left: 20px;">You must login first to add Post or comments</h4></a>
+{{/if}}

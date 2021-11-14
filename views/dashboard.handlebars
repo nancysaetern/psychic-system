@@ -1,0 +1,9 @@
+{{#each blogs as |blog|}}
+{{> dashboard-list}}
+
+{{/each}}
+{{#if loggedIn}}
+<button id="blog_add" class ="btn waves-effect waves-light" onClick="document.location.href='/blog/add';">Add New Post</button>
+{{else}}
+<h3><a href="/login">You must login first to add/maintain Post</a></h3>
+{{/if}}

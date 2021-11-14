@@ -1,0 +1,43 @@
+<div style="font-weight:bolder">
+    <form id="blog-form" class="form">
+        <h2 style="text-align: center;max-width: 95%;">
+          {{#if blog.id}}
+          Maintain 
+          {{else}}
+          Add a New 
+          {{/if}}
+          Post</h2>
+        {{#if loggedIn}}
+        <div style="margin-left: 40px; font-size:larger;">
+          <input id="blog_id" type="hidden" value="{{blog.id}}" class="validate">
+          Title:
+          </div>
+          <div style="margin-left: 40px; padding-left: 10px">
+            <input id="title" type="text" value="{{blog.title}}" size="80" style="background-color: aliceblue; border-radius:10px;font-size:larger;max-width: 95%;">
+          </div>
+        
+          <div style="margin-left: 40px;margin-top:10px; font-size:larger;" >Content:</div>
+          <div style="margin-left: 40px; padding-left: 10px" >
+            <textarea  style="margin-left: 0px; backround-color: aliceblue; border-radius:10px;max-width: 95%;" placeholder="Content" id="content" cols="120" rows="5" class="validate">{{blog.content}}</textarea>
+          </div>
+      
+      <div style="margin-left: 40px;margin-top:10px;max-width: 60%;">
+          <button style= "margin-left: 30px " type="submit" id="blog_btn" class ="btn waves-effect waves-light">
+          {{#if blog.id}}
+              Update Post
+          {{else}}
+              Submit Post
+          {{/if}}
+          
+            </button>
+          {{#if blog.id}}
+          <button id="blog_delete" class ="btn waves-effect waves-light" style="float:right;">Delete</button>
+          {{/if}}
+      </div>
+      {{else}}
+        <h3><a href="/login">You must login first to view this page.</a></h3>
+        {{/if}}
+      
+    </form>
+  </div>
+  <script src="/js/blog.js"></script>
