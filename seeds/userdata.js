@@ -2,9 +2,9 @@ const { User } = require('../models/index');
 
 const userdata = [
   {
-    username: 'Jblack',
-    email: 'joe@joe.com',
-    password: 'joe123',
+    username: 'Quinn',
+    email: 'quinn@quinn.com',
+    password: 'quinn123',
     
   },
   
