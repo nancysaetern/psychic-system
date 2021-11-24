@@ -18,16 +18,19 @@ router.get('/', async (req, res) => {
       blog.get({ plain: true })
     );
   //  console.log(blogs);
-    
-    res.render('homepage', {
+
+res.render('homepage', {
       blogs,
-      loggedIn: req.session.loggedIn,
+     /*  loggedIn: req.session.loggedIn, */
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+
 // Add blog route
 router.get('/blog/add', (req, res) => {
   //if (req.session.loggedIn) {

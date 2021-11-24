@@ -2,7 +2,7 @@
   
     <header>
       <span class="blogtitle">{{blog.title}}</span>
-      <span class="blogdate"> Posted by {{blog.user.username}} on {{ format_date blog.blog_date}}</span>
+      <span class="blogdate"> Posted by {{blog.user.username}} on {{  blog.blog_date}}</span> {{!-- format_date --}}
     </header>
     <p class="content">{{blog.content}}</p>
 </section>
